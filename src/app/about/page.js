@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { ReactLenis } from "lenis/react";
 import styles from '../css/nav.module.css';
-
+import TypoAnimation from "@/components/typoanimation/TypoAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,7 +27,7 @@ export default function page2() {
     gsap.utils.toArray(".row").forEach((row, index) => {
       const cardLeft = row.querySelector(".card-left");
       const cardRight = row.querySelector(".card-right");
-  
+
       gsap.to(cardLeft, {
         x: leftXValues[index],
         scrollTrigger: {
@@ -42,7 +42,6 @@ export default function page2() {
           },
         },
       });
-  
     });
 
     gsap.to(".logo", {
@@ -72,7 +71,6 @@ export default function page2() {
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-
   }, []);
 
   const generateRows = () => {
@@ -95,22 +93,23 @@ export default function page2() {
   return (
     <>
       <ReactLenis root>
-  <nav className={styles.nav}>
-    <div className={styles['nav-links']}>
-      <div className={styles.company}>
-        <Link href="/" className="white-text">Company</Link>
-      </div>
-      <div className={styles.about}>
-        <Link href="/about" className="white-text">About</Link>
-      </div>
-      <div className={styles.menu}>
-        <Link href="/" className="white-text">Menu</Link>
-      </div>
-    </div>
-  </nav>
+        <nav className={styles.nav}>
+          <div className={styles['nav-links']}>
+            <div className={styles.company}>
+              <Link href="/" className="white-text">Company</Link>
+            </div>
+            <div className={styles.about}>
+              <Link href="/about" className="white-text">About</Link>
+            </div>
+            <div className={styles.menu}>
+              <Link href="/" className="white-text">Menu</Link>
+            </div>
+          </div>
+        </nav>
         <section className="hero">
           <div className="hero-img">
             <img src="/whitestar.png" alt="" width={20} height={20} />
+            <TypoAnimation />
           </div>
         </section>
         <section className="main">
@@ -124,11 +123,10 @@ export default function page2() {
           </div>
           {generateRows()}
         </section>
-
         <section className="footer">
           <Link href="">
-            a super cool section
-          </Link>      
+            empty section :c
+          </Link>
         </section>
       </ReactLenis>
     </>

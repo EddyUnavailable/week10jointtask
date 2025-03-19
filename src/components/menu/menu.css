@@ -11,6 +11,14 @@
     z-index: 1;
 }
 
+.menu-logo a:hover, .about a:hover {
+    color: #c5fb45;
+  }
+
+  .menu-open:hover p {
+    color: #c5fb45;
+}
+
 .menu-links,
 .menu-info-col,
 .menu-copy,
