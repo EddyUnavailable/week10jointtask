@@ -1,8 +1,9 @@
-@tailwind base;
+@tailwind base; 
 @tailwind components;
 @tailwind utilities;
- /* import { roboto  } from 'next/font/google'; */
- 
+
+/* import { roboto } from 'next/font/google'; */
+
 /*const roboto = Roboto({
   weight: ['400', '700']
   style: ['normal', 'italic'],
@@ -96,7 +97,6 @@ section {
   align-items: center;
 }
 
-
 .logo {
   width: 100px;
   height: 100px;
@@ -141,7 +141,6 @@ button {
   opacity: 0;
 }
 
-
 .page-content {
   width: 100%;
   height: 100%;
@@ -173,10 +172,21 @@ h1 sup {
   letter-spacing: 0;
 }
 
+.target {
+  display: inline-block;
+  white-space: nowrap;
+}
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .card {
     width: 50%;
     height: 240px;
   }
-}
+
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      font-size: 35px !important;
+    }
+
+  }
