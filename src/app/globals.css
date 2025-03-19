@@ -14,6 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 html, 
@@ -21,8 +22,8 @@ body {
   width: 100%;
   height: 100%;
   font-family: "roboto";
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: #000000;
 }
 
 img {
@@ -44,18 +45,19 @@ section {
 }
 
 .hero-img {
-  width: 50%;
+  width: 15%;
   aspect-ratio: 1 / 1;
 }
 
 .footer {
+  width: 100%;
   height: 50vh;
   align-items: flex-start;
 }
 
 .footer a {
   font-size: 4vw;
-  color: #fff;
+  color: #ffffff;
 }
 
 .main {
@@ -63,6 +65,7 @@ section {
   height: 150vh;
   flex-direction: column;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .row {
@@ -93,10 +96,11 @@ section {
   align-items: center;
 }
 
+
 .logo {
-  width: 150px;
-  height: 150px;
-  border: 2px solid #fff;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #ffffff;
   border-radius: 100%;
   overflow: hidden;
   transform: scale(0);
@@ -115,6 +119,7 @@ section {
   margin: 0.5em 0;
   width: 28px;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  color: #fff;
 }
 
 .line p {
@@ -135,6 +140,39 @@ button {
   transform: translateY(30px);
   opacity: 0;
 }
+
+
+.page-content {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  padding: 6em 2em;
+}
+
+.page-content.hero {
+  background-color: black;
+  background-size: cover;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  color: rgb(255, 255, 255);
+}
+
+h1 sup {
+  position: relative;
+  top: -20%;
+  left: 10px;
+  font-size: 1.5vw;
+  letter-spacing: 0;
+}
+
 
 @media (max-width: 900px) {
   .card {

@@ -1,0 +1,140 @@
+.menu-bar,
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.menu-links,
+.menu-info-col,
+.menu-copy,
+.menu-preview,
+.menu-close {
+    position: relative;
+    z-index: 3;
+}
+
+.menu-bar a,
+.menu-open p {
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-close p {
+    color: #000;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 2em;
+    background: #c5fb45;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+}
+
+.menu-link-item-holder {
+    position: relative;
+    transform: translateY(75px);
+    opacity: 0;
+}
+
+.menu-close-icon {
+    flex: 2;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.menu-copy {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+
+.menu-preview {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-close-icon p {
+    font-size: 100px;
+    -webkit-text-stroke: 5px #c5fb45;
+    line-height: 70%;
+}
+
+.menu-link-item {
+    width: max-content;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.menu-link-item-holder a {
+    color: #000;
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 85%;
+}
+
+.menu-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.menu-info-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 80px;
+}
+
+@media (min-width: 1200px) {
+    .menu-bar {
+        padding: 3em 5em;
+    }
+
+    .menu-info-col {
+        margin-top: 120px;
+    }
+
+    .menu-close-icon p {
+        font-size: 150px;
+    }
+
+    .menu-link-item-holder a {
+        font-size: 100px;
+    }
+
+    .menu-copy {
+        flex: 5;
+        padding-top: 3em;
+    }
+
+    .menu-preview {
+        flex: 5;
+        justify-content: center;
+        align-items: center;
+    }
+}
