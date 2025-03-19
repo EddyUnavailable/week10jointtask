@@ -5,6 +5,8 @@ import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { ReactLenis } from "lenis/react";
+import styles from '../css/nav.module.css';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,10 +81,10 @@ export default function page2() {
       rows.push(
         <div className="row" key={i}>
           <div className="card card-left">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_9WDlf951nDT57pZI2r0X8_GtTrDiqKdHHA&s" alt="" width={100} height={100} />
+            <img src="https://cdn2.picryl.com/photo/1900/12/31/lely-sir-peter-portrait-of-a-lady-in-blue-holding-a-flower-google-art-project-70eaf7-1024.jpg" alt="" width={100} height={100} />
           </div>
           <div className="card card-right">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_9WDlf951nDT57pZI2r0X8_GtTrDiqKdHHA&s" alt="" width={100} height={100} />
+            <img src="https://images.unsplash.com/photo-1579541814924-49fef17c5be5?q=80&w=1940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width={100} height={100} />
           </div>
         </div>
       );
@@ -93,26 +95,28 @@ export default function page2() {
   return (
     <>
       <ReactLenis root>
+  <nav className={styles.nav}>
+    <div className={styles['nav-links']}>
+      <div className={styles.company}>
+        <Link href="/" className="white-text">Company</Link>
+      </div>
+      <div className={styles.about}>
+        <Link href="/about" className="white-text">About</Link>
+      </div>
+      <div className={styles.menu}>
+        <Link href="/" className="white-text">Menu</Link>
+      </div>
+    </div>
+  </nav>
         <section className="hero">
           <div className="hero-img">
-            <img src="/people.png" alt="" width={100} height={100} />
+            <img src="/whitestar.png" alt="" width={20} height={20} />
           </div>
         </section>
         <section className="main">
           <div className="main-content">
             <div className="logo">
-              <img src="/star.png" alt="" width={100} height={100} />
-            </div>
-          </div>
-          <div className="copy">
-            <div className="line">
-              <p>Delve into coding without clutter.</p>
-            </div>
-            <div className="line">
-              <p>One subscription. Endless web design</p>
-            </div>
-            <div className="line">
-              <p>Take the fast lane to mastery</p>
+              <img src="/whitestar.png" alt="" width={100} height={100} />
             </div>
           </div>
           <div className="btn">
@@ -123,7 +127,7 @@ export default function page2() {
 
         <section className="footer">
           <Link href="">
-            Link in description
+            a super cool section
           </Link>      
         </section>
       </ReactLenis>
